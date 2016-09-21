@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {padding:0;margin:0;}
+fieldset, img, html, body, iframe, button , textarea, input{border:none;}
+table {border-collapse:collapse;border-spacing:0;}
+li {list-style:none;}
+em, i, small, caption, th {font-weight:normal;font-style:normal;font-size:100%;}
+h1, h2, h3, h4, h5, h6, em, strong, b {font-weight:bold;font-size:100%;}
+caption{text-align:left;}
+body {word-wrap:break-word;	font:14px/normal  "微软雅黑", tahoma, arial, "宋体";color:#666;background:#fff; position:relative;}
+textarea, input, button, select, pre {outline:0;font-size:inherit;line-height:inherit;color:inherit;font-family:inherit;}
+textarea{overflow:auto;resize:none;}
+input,textarea{padding:0 3px;}
+a, button, input[type="button"], input[type="submit"]{cursor:pointer;outline:0; font-family:"微软雅黑", tahoma, arial, "宋体";}
+input[type=button], input[type="submit"]{-webkit-appearance:none;outline:none;}/* 清除IOS下按钮的原生样式 */
+a{color:#555; text-decoration:none;}
+a:hover{color:#fff;}
+label{margin-left:5px;}
+select{white-space:nowrap;}
+
+
+
+/* 勾选框 */
+input[type="checkbox"],input[type="radio"]{vertical-align:-1px; *vertical-align:middle; margin-right:3px;}
+input[type="checkbox"]{vertical-align:-1px;}
+
+
+/* nav */
+.g-in{position:relative;width:1140px; margin:0 auto; text-align:center;}
+.g-in:after{display:block;visibility:hidden;height:0;overflow:hidden;clear:both;content:".";}
+.f-usn {-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;}
+
+/* 浮动 */
+.f-fl{float:left!important;}
+.f-fr{float:right!important;}
+.f-tal{text-align:left!important;}
+.f-tac{text-align:center!important;}
+.f-tar{text-align:right!important;}
+
+/* 链接 
+.z-gre{ color:#00aaa8;}
+.z-gre:hover, .z-gre.z-crt{ text-decoration:underline;}*/
+
+
+/* 图标位置
+.f-vad2{vertical-align:-2px!important;} */
+
+/* 距离
+.mar0{margin:0px!important;} */
+
+
+
+/* 定位距离 
+.z-left158{ left:-158px !important;}*/
+
+
+/* 字号 */
+.fs18{ font-size:18px !important;}
+
+
+/* 行高 
+.f-lineh34{ line-height:34px !important;}*/
+/* 清除浮动 */
+.f-cb {clear:both;zoom:1;}
+.f-cb:after {clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:".";}
+
+
+/* 清除背景 
+.f-bgnone{ background:none!important;}*/
+
+/* 圆角 
+.f-borad0{border-radius:0px!important;-webkit-border-radius:0px!important; -o-border-radius:0px!important;-moz-border-radius:0px!important;}*/
+
+
+
+
+/* 清除投影 
+.f-bsnone{box-shadow:none!important;}*/
+
+/* 字体颜色 */
+.z-red{ color:#9b0606!important;}
+
+
+
+/* 去掉边框 
+.f-bdnone{border:none!important;}*/
+
+
+/* 边划线 
+.f-bottomline{ border-bottom:1px solid #d8d8df;}*/
+
+/* 清除边线
+.f-borbnone{ border-bottom:none!important;} */
+
+ /* 边划线颜色
+.f-bdd44{border-bottom-color:#ccf6e9!important;} */
+
+
+/* 字体大小 
+.fs14{ font-size:14px!important;}*/
+
+/* 字体加粗 
+.fblod{ font-weight:bold!important;} */
+
+
+/* 缩进 
+.ti25{ text-indent:25px;}*/
+
+/* 隐藏 */
+.z-hide{ display:none!important;}
+.z-blo{ display: inline-block!important;}
+
+/* 显示
+.z-show{ display:inline-block!important;} */
+
+/* 滚动条
+.f-oy{ overflow-x:hidden!important; overflow-y:auto!important;} */
+
+/* 宽度
+.f-widthauto{width:auto!important;}
+.f-width20{width:20px!important;} */
+
+
+
+/* 高度 
+.f-height15{ height:15px!important;}*/
+
+
+/* 最小高度 
+.f-min-height170{ min-height:170px!important;}*/
+/* 最大高度 
+.f-max-height40{ max-height:40px!important;}*/
+
+/* 粗体 
+.f-fwb{ font-weight:bold;}*/
+
+/* 字间距
+.f-textls3{ letter-spacing:3px;} */
+
+/* 行高
+.lineheight14{ line-height:14px!important;} */
+/* 最小高度 
+.f-minheight200{min-height:200px;}*/
+
+/* 居左位置 
+.f-left40{left:40px!important;}*/
+
+/* 居顶位置
+.f-top84{top:84px!important;} */
+
+
+
+/* 背景颜色 
+.f-bgcl01{background-color:#f8f9fb!important;}*/
+
+
+
+
+/* 小手 */
+.u-hand{ cursor:pointer!important;}
+
+/* 置灰 */
+.filterGray{color:gray!important; -webkit-filter: grayscale(100%);-moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter: grayscale(100%); filter:grayscale(100%);filter:gray;opacity:0.4;-moz-opacity:0.4;cursor:default!important;}
+.filterGray:hover{cursor:default;color:#gray;}
+
+
+/* --------- */
+/* 分页 
+.m-page{ width:auto; float:right; display:inline-block;}
+.m-page a, .m-page p{ float:left; margin-left:10px; font-size:14px;}
+.m-page .z-pag{color:#666; height:38px; line-height:38px; width:40px; text-align:center; border:1px solid #e5e5e5;}
+.m-page .z-pag:hover{color:#00a6ff; border:1px solid #00a6ff;}
+.m-page .z-pag.z-crt{color:#fff; border:1px solid #00a6ff; background:#00a6ff;}
+.m-page .m-pagturn, .m-page .z-crtpt{width:80px; height:38px; line-height:38px; text-align:center;}
+.m-page .m-pagturn{ border:1px solid #e5e5e5; color:#666;}
+.m-page .m-pagturn:hover{ border:1px solid #00a6ff; color:#00a6ff;}
+.m-page .z-crtpt, .m-page .z-crtpt:hover{border:1px solid #e5e5e5; background:#f6f6f6; cursor:default !important; color:#ccc;}
+.m-page p{ line-height:38px; color:#999; padding:0 5px;}*/
+
+
+

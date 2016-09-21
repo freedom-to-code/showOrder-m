@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>晒单首页</title>
+    <link href="images/common.css" rel="stylesheet" type="text/css" />
+    <link href="images/public.css" rel="stylesheet" type="text/css" />
+	<link href="images/slider.css" rel="stylesheet" type="text/css">
+    <script src="images/hn_jQuery.1.8.3.min.js" type="text/javascript"></script>
+	<script src="images/jquery.slides.js" type="text/javascript"></script><!--弹层相册效果-->
+</head>
+<body>
+<!-- header -->
+<div class="m-mobtop">
+	<div class="m-in">
+		<a class="z-topback"></a>
+		<div class="m-tit">商品晒单</div>
+		<a class="z-topmenu"></a>
+	</div>
+</div>
+<!-- /header-->
+<!-- 主体 -->
+<!-- ad -->
+<div class="m-mobcont">
+	<div class="m-in">
+		<a class="m-adbox"><img src="images/mob-topad.jpg" alt=""/></a>
+		<div class="m-listbox">
+			<div class="m-list">
+				<div class="m-name">我有个大财神</div>
+				<div class="m-leftimg"><img src="images/img-mob01.jpg" alt=""/></div>
+				<div class="m-rightbox">
+					<div class="m-rigbtn">
+						<div class="m-num">243</div>
+						<a class="z-zan"></a>
+					</div>
+					<div class="m-txt">我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我个大财神我个大财神我个大财神我个大财神我......</div>
+				</div>
+			</div>
+			
+			<div class="m-list">
+				<div class="m-name">我有个大财神</div>
+				<div class="m-leftimg"><img src="images/img-mob01.jpg" alt=""/></div>
+				<div class="m-rightbox">
+					<div class="m-rigbtn">
+						<div class="m-num">243</div>
+						<a class="z-zan"></a>
+					</div>
+					<div class="m-txt">我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我个大财神我个大财神我个大财神我个大财神我......</div>
+				</div>
+			</div>
+			
+			<div class="m-list">
+				<div class="m-name">我有个大财神</div>
+				<div class="m-leftimg"><img src="images/img-mob01.jpg" alt=""/></div>
+				<div class="m-rightbox">
+					<div class="m-rigbtn">
+						<div class="m-num">243</div>
+						<a class="z-zan"></a>
+					</div>
+					<div class="m-txt">我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我个大财神我个大财神我个大财神我个大财神我......</div>
+				</div>
+			</div>
+			
+			<div class="m-list">
+				<div class="m-name">我有个大财神</div>
+				<div class="m-leftimg"><img src="images/img-mob01.jpg" alt=""/></div>
+				<div class="m-rightbox">
+					<div class="m-rigbtn">
+						<div class="m-num">243</div>
+						<a class="z-zan"></a>
+					</div>
+					<div class="m-txt">我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我有个大财神我个大财神我个大财神我个大财神我个大财神我......</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /主体-->
+<!-- foot -->
+<div class="m-mobfoot">
+	<div class="m-in">
+		<a class="z-sd">我要晒单</a>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+$('#js-closefc').click(function(){
+	$(this).parent().removeClass("z-blo");
+})
+$('.z-zan').click(function(){
+	$(this).addClass("z-crt");
+})
+</script>
+<script type="text/javascript">//select下拉框js
+$(function(){
+	var s_title=$(".select_box span");
+	var s_select=$(".select_box li");
+	
+	s_title.click(function(e){
+		$(this).addClass("span_aa");
+		$(this).next("ul").show();
+		e.stopPropagation();
+		});		
+		
+	s_select.click(function(){
+		var s_text=$(this).html();
+		var s_title_2=$(this).parent('ul').prev("span");
+		s_title_2.html(s_text).removeClass("span_aa");
+		$(this).parent('ul').hide();
+		});
+		
+	$(document).click(function(){
+		s_title.removeClass("span_aa");
+		$(".select_box ul").hide();		
+		});    
+    	
+});
+</script>
+
+<script type="text/javascript">//右侧产品滚屏js
+(function($){
+$.fn.extend({
+    Scroll:function(opt,callback){
+  //参数初始化
+    if(!opt) var opt={};
+    var _btnUp = $("#"+ opt.up);//Shawphy:向上按钮
+    var _btnDown = $("#"+ opt.down);//Shawphy:向下按钮
+    var timerID;
+    var _this=this.eq(0).find("ul:first");
+    var lineH=_this.find("li:first").height(), //获取行高
+    line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
+    speed=opt.speed?parseInt(opt.speed,10):500; //卷动速度，数值越大，速度越慢（毫秒）
+    timer=opt.timer //?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+    if(line==0) line=1;
+    var upHeight=0-line*lineH;
+    //滚动函数
+    var scrollUp=function(){
+    _btnUp.unbind("click",scrollUp); //Shawphy:取消向上按钮的函数绑定
+    _this.animate({
+        marginTop:upHeight
+    },speed,function(){
+        for(i=1;i<=line;i++){                                   
+		_this.find("li:first").appendTo(_this);
+        }
+        _this.css({marginTop:0});
+        _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件
+    });
+    }
+     
+    //Shawphy:向下翻页函数
+    var scrollDown=function(){
+        _btnDown.unbind("click",scrollDown);
+        for(i=1;i<=line;i++){
+            _this.find("li:last").show().prependTo(_this);
+        }
+        _this.css({marginTop:upHeight});
+        _this.animate({
+            marginTop:0
+        },speed,function(){
+            _btnDown.bind("click",scrollDown);
+        });
+    }
+     
+    //Shawphy:自动播放
+    var autoPlay = function(){
+        //if(timer)timerID = window.setInterval(scrollUp,timer);
+    };
+    var autoStop = function(){
+        if(timer)window.clearInterval(timerID);
+    };
+                  
+    //鼠标事件绑定
+    _this.hover(autoStop,autoPlay).mouseout();
+    _btnUp.css("cursor","pointer").click( scrollUp ).hover(autoStop,autoPlay);//Shawphy:向上向下鼠标事件绑定
+    _btnDown.css("cursor","pointer").click( scrollDown ).hover(autoStop,autoPlay);
+    }       
+    })
+})(jQuery);
+ 
+$(document).ready(function(){
+    $("#scrollDiv").Scroll({line:3,speed:500,timer:3000,up:"btn1",down:"btn2"});
+});
+</script>
+</html>
+
